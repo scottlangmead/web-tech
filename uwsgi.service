@@ -1,0 +1,13 @@
+[uwsgi]
+    wsgi-file = /home/40482871/web-tech/cwk/app.py
+    virtualenv = /home/40482871/web-tech/cwk/venv/
+    pythonpath = /home/40482871/web-tech/cwk/
+    chdir = /home/40482871/web-tech/cwk/
+        callable = app
+    http = :80
+    worker = 8
+    master = true
+    processes = 8
+    die-on-term = true
+    harakiri = 40
+    heartbeat = 10

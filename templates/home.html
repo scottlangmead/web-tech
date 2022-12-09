@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Weather</title>
+        <link rel="stylesheet" href="../static/css/main.css">
+        <link rel="icon" type="image/x-icon" href="../static/img/favicon.ico">
+    </head>
+    <!--Background image/colour depends on bgimage-->
+    <body style={{ bgimage }}>
+        <div class="panel">
+            <h1 id="title">Weather Search</h1>
+            <!--Input, elements change border depending on borderhighlight-->
+            <form method="POST">
+                <!--Text box-->
+                <div class="textbox" style={{ borderhighlight }}>
+                    <input name="city" type="text" placeholder="Enter City">
+                </div>
+                <!--Search button-->
+                <button class="btn" style={{ borderhighlight }}>
+                    Search
+                </button>
+            </form>
+            <!--City data-->
+            <div class="city-data">
+                <!--Error message, only appears if there is an error-->
+                <h1>{{ error }}</h1>
+                <!--City data, doesn't appear if there is an error-->
+                <h1>{{ weather.location }}</h1>
+                <p>{{ weather.details }}</p>
+                <p>{{ weather.sunriseandset }}</p>
+                <p>{{ weather.clouds }}</p>
+                <p>{{ weather.windspeed }}</p>
+                <p>{{ weather.humidity }}</p>
+                <p>{{ weather.rainfall }}</p>
+                <p>{{ weather.snowfall }}</p>
+            </div>
+        </div>
+    </body>
+</html>
+

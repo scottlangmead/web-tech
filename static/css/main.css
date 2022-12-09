@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica";
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+.panel {
+    width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 25px 35px;
+    transform: translate(-50%,-50%);
+    background-color: #2f3640;
+    text-align: center;
+}
+
+#title {
+    margin: 0;
+    margin-bottom: 10px;
+    color: #f5f6fa;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.textbox {
+    width: 60%;
+    overflow: hidden;
+    margin: 8px 0;
+    border-bottom: 2px solid;
+    display: inline-block;
+    height: 50px;
+}
+
+.textbox input{
+    border: none;
+    outline: none;
+    background: none;
+    color: #f5f6fa;
+    font-size: 1.4em;
+    width: 80%;
+    float: left;
+    margin: 0 10px;
+    height: 50px;
+}
+
+.btn{
+    transition-duration: 0.35s;
+    width: 35%;
+    height: 50px;
+    background-color: #2f3640;
+    border: 2px solid;
+    padding: 5px;
+    margin-top: 10px;
+    font-size: 1.4em;
+    color: #f5f6fa;
+    float: right;
+}
+
+.btn:hover {
+    background-color: #1f242b;
+    color: #f5f6fa;
+}
+
+.city-data {
+    margin: 40px 0 25px 0;
+    text-align: center;
+    color: #f5f6fa;
+}
+
+.city-data h1 {
+    margin-bottom: 6px;
+    font-size: 1.7em;
+    font-weight: 400;
+}
+
+.city-data p {
+    font-size: 1.1em;
+    white-space: break-spaces;
+}
+

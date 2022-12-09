@@ -47,14 +47,13 @@ def index():
             elif type == 13: bgimage = 'background-image:url("static/img/snow.jpg");'
             elif type == 50: bgimage = 'background-image:url("static/img/mist.jpg");'
             
-            if type >= 5 and type <= 10:    # If raining add rainfall to data (mm)
-                weather['rainfall'] = r['rain']['1h']
-            elif type == 13:    # If snowing add snowfall to data (mm)
-                weather['snowfall'] = r['snow']['1h']
+            if type >= 5 and type <= 10:    # If raining add rainfall to data
+                weather['rainfall'] = str(r['rain']['1h']) + ' mm of Rainfall (last hour)'
+            elif type == 13:    # If snowing add snowfall to data
+                weather['snowfall'] = str(r['snow']['1h']) + ' mm of Snowfall (last hour)'
 
     # Return valid result or no city has been input yet
     return render_template('home.html', bgimage=bgimage, weather=weather, borderhighlight=highlights)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
-
